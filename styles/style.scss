@@ -25,6 +25,11 @@ p{
     font-weight: 300;
 }
 
+.sub-title{
+    padding: 5px 0;
+    font-weight: 500;
+}
+
 @mixin halfscreen {
     @media screen and (max-width:1150px) {
         @content;
@@ -179,29 +184,30 @@ p{
         .skills-list{
             display: flex;
             gap: 5px;
-            span{
-                display: flex;
-                border: grey solid 2px;
-                border-radius: 50%;
-                width: 60px;
-                height: 60px;
-                text-align: center;
-                transition: transform ease 0.1s;
-                img{
-                    padding: 3px;
-                    margin: auto;
-                    width: 40px;
-                    height: auto;
-                }
-            }
-            span:hover{
-                transform: translate(0, -2px);
-            }
         }
     }
     .skill-card:hover{
         transform: translate(0, -4px);
     }
+}
+
+.skill-png{
+    display: flex;
+    border: grey solid 2px;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    transition: transform ease 0.1s;
+    img{
+        padding: 3px;
+        margin: auto;
+        width: 40px;
+        height: auto;
+    }
+}
+.skill-png:hover{
+    transform: translate(0, -2px);
 }
 
 .skills-wrapper{
@@ -230,15 +236,19 @@ p{
 
 //Fin de ma description
 
-.my-experience-title{
+.portefolio-title{
     text-align: center;
+}
+
+.my-experience{
+    margin-bottom: 100px;;
 }
 
 .experience-list{
     padding: 15px;
     margin:20px auto;
     border-radius: 15px;
-    width: 70%;
+    width: 100%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     .experience-card{
@@ -265,6 +275,9 @@ p{
             margin-right: 40px;
             height: auto;
             width: 200px;
+            @include halfscreen(){
+                margin: 0 auto;
+            }
         }
     }
 }
@@ -281,4 +294,46 @@ p{
     border-radius: 5px;
     margin-right: 15px;
     background-color: rgb(207, 206, 206);
+}
+
+
+.static {
+    position: absolute;
+    background: white;
+   }
+  
+  .static:hover {
+    opacity: 0;
+}
+
+.project-list{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+    
+    .project-card{
+        height: 600px;
+        width: 600px;
+        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+        border-radius: 5px;
+        transition:all ease 1s;
+        overflow: hidden;
+        .img-project{
+            width: 600px;
+            height: auto;
+
+        }
+    }
+    .project-card:hover{
+        transform: scale(1.03);
+    }
+}
+
+.projet-skills{
+    display: flex;
+    justify-content: center;
+    gap:20px;
 }
