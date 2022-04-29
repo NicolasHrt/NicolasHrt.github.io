@@ -72,10 +72,7 @@ p{
 
 
 .my-portefolio{
-    padding: 0 100px;
-    @include mobile(){
-        padding: 0 10px;
-    }
+    margin: 0 10%;
 }
 
 //hero banner
@@ -102,7 +99,7 @@ p{
           font-weight: 500;
           line-height: 1.1em;
           @include mobile(){
-            font-size: 60px;
+            font-size: 50px;
         }
           .justapoint{
               font-size: 100px;
@@ -160,6 +157,9 @@ p{
 
 .about-me{
     width: 90%;
+    @include mobile(){
+        width: 100%;
+    }
 }
 
 .my-skills{
@@ -296,7 +296,6 @@ p{
     background-color: rgb(207, 206, 206);
 }
 
-
 .static {
     position: absolute;
     background: white;
@@ -336,4 +335,43 @@ p{
     display: flex;
     justify-content: center;
     gap:20px;
+}
+
+.my-footer{
+    padding: 20px 20px;
+    display: flex;
+    text-align: center;
+    background-color: #d1d1d9 ;
+    .footer-description{
+        margin: auto;
+    }
+}
+
+
+.footer-container-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    a{
+        height:50px;    
+        width: 50px;
+        text-align: center;
+        line-height: 50px;
+        border-radius: 50%;
+        margin: 5px 5px;
+        transition: all ease 0.5s;
+        i{
+            color: white;
+        }
+    }
+    a:nth-child(1){
+        background-color: #00aced;
+    }
+    a:nth-child(2){
+        background-color: #c4302b;
+    }
+    a:hover{
+        opacity: 0.7;
+    }
 }
