@@ -30,8 +30,19 @@ p{
     font-weight: 500;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 @mixin halfscreen {
     @media screen and (max-width:1150px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width:750px) {
         @content;
     }
 }
@@ -368,7 +379,7 @@ p{
         }
     }
     a:nth-child(1){
-        background-color: #00aced;
+        background-color: #0A66C2;
     }
     a:nth-child(2){
         background-color: #c4302b;
@@ -376,4 +387,47 @@ p{
     a:hover{
         opacity: 0.7;
     }
+}
+
+//nav bar responsive
+
+.burger{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+    @include tablet(){
+        display: block;
+    }
+    div{
+        width: 25px;
+        height: 3px;
+        background-color: #080459;
+        margin:5px;
+    }
+}
+
+
+
+@include tablet(){
+    .nav-list{
+        padding: 5px;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        background-color: white;
+        border-bottom: #080459 solid 2px;
+        box-shadow: #080459 0 2px 2px;
+        transform: translateX(100%);
+        opacity: 0;
+        transition: all ease-in 0.4s;
+        ul{
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+}
+
+.nav-active{
+    transform: translateX(0%);
+    opacity: 1;
 }
