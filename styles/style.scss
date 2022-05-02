@@ -96,20 +96,20 @@ html, body {
 
 //hero banner
 .hero-container{
-    height: 94vh;
-    @include mobile(){
-        height: 70vh;
-    }
+    height: 100vh;
 }
 .main-title{
-    padding: 100px 0;
+    padding: 100px 0 70px 0;
+    @include mobile(){
+        padding: 100px 0 40px 0;
+    }
     .gradient-title {
         font-size: 120px;
         font-weight: bold;
         background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(37,116,209,1) 100%); 
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
-        @include mobile(){
+        @include halfscreen(){
             font-size: 90px;
         }
       }
@@ -117,7 +117,7 @@ html, body {
           font-size: 72px;
           font-weight: 500;
           line-height: 1.1em;
-          @include mobile(){
+          @include halfscreen(){
             font-size: 50px;
         }
           .justapoint{
@@ -127,14 +127,30 @@ html, body {
       }
 }
 
-.my-image{
+.img-container{
+    position: absolute;
+    right: 150px;
+    animation: scaling 1s normal forwards ease-in-out;
+    @include halfscreen(){
+        text-align: center;
+        position: static;
+    }
     img{
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+        width: 300px;
+        height: 300px;
         border-radius: 50%;
-        width: 200px;
-        height: auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 }
+
+@keyframes scaling {
+    from {
+      transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+  }
 
 .wrapper-typing{
     display: flex;
