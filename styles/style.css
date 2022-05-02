@@ -38,6 +38,7 @@ html, body {
 }
 
 .nav-bar {
+  z-index: 2;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -134,6 +135,7 @@ html, body {
 }
 
 .img-container {
+  z-index: 1;
   position: absolute;
   right: 150px;
   -webkit-animation: scaling 1s normal forwards ease-in-out;

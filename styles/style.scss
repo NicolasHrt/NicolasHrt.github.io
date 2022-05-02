@@ -58,6 +58,7 @@ html, body {
 //barre de navigation
 
 .nav-bar{
+    z-index: 2;
     display: flex;
     justify-content: space-around;
     height: 50px;
@@ -128,6 +129,7 @@ html, body {
 }
 
 .img-container{
+    z-index: 1;
     position: absolute;
     right: 150px;
     animation: scaling 1s normal forwards ease-in-out;
