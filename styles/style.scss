@@ -141,10 +141,12 @@ body {
     position: static;
   }
   img {
-    width: 300px;
-    height: 300px;
+    width: 381px;
     border-radius: 50%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @include halfscreen() {
+      width: 300px;
+    }
   }
 }
 
@@ -305,17 +307,17 @@ body {
   }
 }
 
-.job-title {
+.card-title {
   padding: 10px 0;
 }
-.job-date {
+.card-date {
   font-size: 18px;
   font-weight: 500;
 }
-.job-location {
+.card-location {
   font-size: 18px;
 }
-.job-description {
+.card-description {
   padding: 10px 0;
 }
 
@@ -375,6 +377,7 @@ body {
 }
 
 .my-footer {
+  margin-top: 50px;
   padding: 20px 20px;
   display: flex;
   text-align: center;
@@ -454,14 +457,37 @@ body {
 }
 
 .education-list{
-    margin:0 auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
 }
 
 .education-card {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border-radius: 10px;
   padding: 15px;
-  text-align: center;
-  width: 500px;
 
+  min-width: 400px;
+  img{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    
+  }
+}
+
+.what-learned{
+  padding: 15px;
+
+  p{
+    font-weight: 400;
+  }
+  li{
+    padding: 5px 0;
+    font-weight: 300;
+  }
+}
+
+.align-center{
+  text-align: center;
 }
