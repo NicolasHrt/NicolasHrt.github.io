@@ -456,6 +456,11 @@ body {
   opacity: 1;
 }
 
+.nav-bar-transform{
+  transform: translateY(-50px);
+  opacity: 0;
+}
+
 .education-list{
     display: flex;
     justify-content: center;

@@ -592,6 +592,12 @@ body {
   opacity: 1;
 }
 
+.nav-bar-transform {
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  opacity: 0;
+}
+
 .education-list {
   display: -webkit-box;
   display: -ms-flexbox;
